@@ -29,7 +29,7 @@ app.get("/", (req, res) => {
 
 /* Configuración del servidor */
 
-const PORT = 8080
+const PORT = 8081
 const server = app.listen(PORT, () => {
     console.log('Tu servidor esta funcionando en el puerto: ', PORT);
 })
