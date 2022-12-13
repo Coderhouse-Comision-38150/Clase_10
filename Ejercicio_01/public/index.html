@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+
+    <title>Datos Personales Frontend</title>
+
+</head>
+<body>
+    
+    <div></div>
+
+    <!-- Creamos el script que interactura con handlebars -->
+
+    <script>
+        // Compilar el templates
+        var template = Handlebars.compile(
+            `
+            <ul>
+                <li>{{nombre}}</li>
+                <li>{{apellido}}</li>
+                <li>{{edad}}</li>
+                <li>{{email}}</li>
+                <li>{{telefono}}</li>
+                <li>{{fyh}}</li>
+            </ul>
+            `
+        )
+        // Ejecutar el template compilado
+        document.querySelector('div').innerHTML = template({
+            nombre: 'Gonzalo',
+            apellido: 'Romano',
+            edad: '28',
+            email: 'profe@jpromano.net',
+            telefono: '5353-5353',
+            fyh: new Date().toLocaleString()
+        })
+    </script>
+
+</body>
+</html>
